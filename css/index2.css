@@ -1,0 +1,100 @@
+/* rem布局 */
+/* 基准rem为50px 一个rem对应50px */
+html{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction:column;
+  /* 使用16px去拦截50px */
+  font-size: 16px;
+}
+header{
+  /* 84/2/50
+以后都可以直接除以100
+  */
+  height: 0.84rem;
+  display: flex;
+  margin-left: 0.02rem;
+  margin-right: 0.02rem;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+  align-items: center;
+  color: #959595;
+}
+header>span:not(:nth-child(2)){
+  font-size: 20px;
+}
+nav{
+   height: 0.84rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  padding: 0 1rem;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+nav>span:hover{
+  color: red;
+}
+section{
+   flex: 1;
+}
+section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f4f5f5;
+
+}
+section>div{
+  width: 49%;
+  /* height: 5.74rem; */
+  margin-bottom: 0.12rem;
+  background-color: white;
+}
+div>img{
+  width: 100%;
+}
+.text{
+  margin: 0.18rem 0.2rem 0.2rem 0.2rem;
+}
+.text>p:nth-child(1){
+  font-size: 0.24rem;
+
+}
+.text>p:nth-child(1)::before{
+  content: '包邮';
+  font-size: 0.18rem;
+  background-color: orangered;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 3px;
+
+
+}
+.text>p:nth-child(2){
+  font-size: 0.24rem;
+  color: #b1b1b1;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.text>p:nth-child(3){
+  font-size: 0.24rem;
+  color:orangered;
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 5px; */
+  font-weight: bold;
+}
